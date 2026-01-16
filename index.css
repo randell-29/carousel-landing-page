@@ -1,16 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+}
+
+:root {
+    --primary: red;
 }
 
 body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
     background-image: url("./assets/images/bg/mavuika_bg.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
+    overflow: hidden;
+    transition: 0.3s;   
 }
 
-.carousel img {
-    width: 200px;
-    height: 200px;
+body:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
 }
+
+body> * {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    z-index: 10;
+}
+
+header .page-title {
+    font-optical-sizing: auto;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navigation ul li {
+    margin: 0 10px 0 10px;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigation ul li:hover {
+    color: var(--primary);
+}
+
+.navigation ul li:first-child i:hover {
+    color: var(--primary);
+}
+
+main {
+    position: relative;
+    top: 95px;
+    width: 100%;
+    min-height: 60vh;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .info {
+    width: 50%;
+}
+
+main .info .main-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-info .character-name {
+    font-optical-sizing: auto;
+    font-size: 45px;
+    font-weight: 900;
+    font-style: normal;
+    margin-right: 5px;
+}
+
+.main-info img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+
+.info .sub-info .tags{
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 10px;
+}
+
+.tags span {
+    margin: 0 3px 0 3px;
+    border-right: 1px solid #fff;
+    padding-right: 6px;
+}
+
+.tags span:first-child {
+    margin-left: 0;
+}
+
+.tags span:last-child {
+    border-right: none;
+}
+
+.sub-info .lore {
+    width: 85%;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.sub-info .buttons {
+    
+}
+
+.sub-info .buttons button{
+    margin: 5px 5px 0 5px;
+    padding: 5px 10px;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    border: 1px;
+    border-radius: 2px;
+    background-color: var(--primary);
+}
+
+.buttons button:first-child {
+    margin-left: 0;
+}
+
+main .carousel {
+    width: 50%;
+    display: flex;
+    justify-content: center;    
+}
+
+
+.carousel img {
+    width: 180px;
+    height: 180px;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:10px;
+    padding: 0 60px 10px 60px;
+}
+
+footer .externals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .externals .socials ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.socials ul li {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.socials ul li i:hover {
+    color: var(--primary);
+}
+
+footer .gameplay button {
+    margin: 5px 5px 0 5px;
+    padding: 5px 10px 5px 8px;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+footer .gameplay i{
+    color: #000;
+}
+
+.gameplay button:hover {
+    border: 1px;
+    border-radius: 2px;
+    background-color: var(--primary);
+    color: #fff;
+}
+
