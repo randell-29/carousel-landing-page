@@ -10,58 +10,74 @@
             <link rel="stylesheet" href="./css/fontawesome.min.css"/>
             <link rel="stylesheet" href="./css/bootstrap.min.css"/>
         </head>
-        <header>
-            <h1 class="page-title">GLibrary</h1>
-            <nav class="navigation">
-                <ul>
-                    <li><i class="fa-regular fa-house"></i></li>
-                    <li>Characters</li>
-                    <li>Weapons</li>
-                    <li>Artifacts</li>
-                </ul>
-            </nav>
-            <section class="search-bar">
-                <input type="text">
-            </section>
-        </header>
-        <main>
-            <section class="info">
-                <article class="main-info">
-                    <h2 class="character-name">Mavuika</h2>
-                    <img src="./assets/images/visions/pyro.png" alt="vision">
-                </article>
-                <article class="sub-info">
-                    <section class="tags">
-                        <span>Female</span><span>Pyro</span><span>Claymore</span><span>Natlan</span>
-                    </section>
-                    <section class="lore">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus tempora quam, ipsum dolore neque praesentium ex. Modi debitis delectus minima vel, vitae numquam mollitia error nam rerum aliquid, rem sequi!</p>
-                    </section>
-                    <section class="buttons">
-                        <button>Talents</button>
-                        <button>Constelations</button>
-                        <button>Weapons</button>
-                        <button>Artifacts</button>
-                    </section>
-                </article>
-            </section>  
-            <section class="carousel">
-                <img src="./assets/images/cards/mavuika_card.png" alt="character-card">
-            </section>
-        </main>
-        <footer>
-            <section class="gameplay">
-                <button><i class="fa-solid fa-play"></i>Watch</button>
-            </section>
-            <section class="externals">
-                <nav class="socials">
+        <header class="container"> 
+            <section class="row">
+                <h1 class="col-12 col-lg-3 page-title">GLibrary</h1>
+                <nav class="col-12 col-lg-6 navigation">
                     <ul>
-                        <li><i class="fa-brands fa-facebook"></i></li>
-                        <li><i class="fa-brands fa-youtube"></i></i></li>
-                        <li><i class="fa-brands fa-twitch"></i></li>
-                        <li><i class="fa-brands fa-discord"></i></li>
+                        <li><i class="fa-regular fa-house"></i></li>
+                        <li>Characters</li>
+                        <li>Weapons</li>
+                        <li>Artifacts</li>
                     </ul>
                 </nav>
+                <section class="col-12 col-lg-3 search-bar">
+                    <input type="text">
+                </section>
+            </section>
+        </header>
+        <main class="container">
+            <section class="row">
+                <section class="col-12 col-lg-6 info">
+                    <article class="main-info">
+                        <h2 class="character-name">Mavuika</h2>
+                        <img src="./assets/images/visions/pyro.png" alt="vision">
+                    </article>
+                    <article class="sub-info">
+                        <section class="tags">
+                            <span>Female</span><span>Pyro</span><span>Claymore</span><span>Natlan</span>
+                        </section>
+                        <section class="lore">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus tempora quam, ipsum dolore neque praesentium ex. Modi debitis delectus minima vel, vitae numquam mollitia error nam rerum aliquid, rem sequi!</p>
+                        </section>
+                        <section class="buttons">
+                            <button>Talents</button>
+                            <button>Constelations</button>
+                            <button>Weapons</button>
+                            <button>Artifacts</button>
+                        </section>
+                    </article>
+                </section>  
+                <section class="col-12 col-lg-6 carousel-holder">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <div class="slide"><img src="./assets/images/cards/mavuika_card.png"/></div>
+                            <div class="slide"><img src="./assets/images/cards/columbina_card.png" /></div>
+                            <div class="slide"><img src="./assets/images/cards/nahida_card.png" /></div>
+                            <div class="slide"><img src="./assets/images/cards/furina_card.png" /></div>
+                            <div class="slide"><img src="./assets/images/cards/raiden_card.png" /></div>
+                            <div class="slide"><img src="./assets/images/cards/zhongli_card.png" /></div>
+                            <div class="slide"><img src="./assets/images/cards/venti_card.png" /></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer class="container">
+            <section class="row">
+                <section class="col-6 col-lg-6 gameplay">
+                    <button><i class="fa-solid fa-play"></i>Watch</button>
+                </section>
+                <section class="col-6 col-lg-6 externals">
+                    <nav class="socials">
+                        <ul>
+                            <li><i class="fa-brands fa-facebook"></i></li>
+                            <li><i class="fa-brands fa-youtube"></i></i></li>
+                            <li><i class="fa-brands fa-twitch"></i></li>
+                            <li><i class="fa-brands fa-discord"></i></li>
+                        </ul>
+                    </nav>
+                </section>
             </section>
         </footer>
     </html>
