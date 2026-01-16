@@ -224,7 +224,10 @@ footer .gameplay button {
     font-weight: 700;
     font-style: normal;
     letter-spacing: 1px;
-    color: var(--primary);
+    color: #000;
+    background-color: #fff;
+    border: 1px;
+    border-radius: 2px;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -234,9 +237,6 @@ footer .gameplay i{
 }
 
 .gameplay button:hover {
-    border: 1px;
-    border-radius: 2px;
     background-color: var(--primary);
-    color: #fff;
 }
 
