@@ -92,6 +92,11 @@ main {
     align-items: center;
 }
 
+.info {
+    width: 100%;
+    height: 400px;
+}
+
 .info .main-info{
     width: 100%;
     display: flex;
@@ -170,30 +175,27 @@ main {
 }
 
 .carousel-holder {    
+    width: 100%;
+    height: 400px;
     display: flex;
     justify-content: center;    
-    align-items: center;
-}
-
-.carousel-holder img {
-    width: 180px;
-    height: 180px;
+    align-items: center;    
 }
 
 .carousel {
-  width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.carousel-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding-bottom: 1rem;
+.carousel-holder .carousel .slide i{
+    font-size: 40px;
 }
 
-.carousel-track .slide {
-  scroll-snap-align: center;
+.carousel-holder .carousel img {
+    width: 250px;
 }
 
 footer {
