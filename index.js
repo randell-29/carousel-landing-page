@@ -97,46 +97,6 @@ const genshinDirectory = [
     }
 ]
 
-//Arrays
-var bgArray = [
-    "url('./assets/images/bg/columbina_bg.jpg')",
-    "url('./assets/images/bg/mavuika_bg.jpg')",
-    "url('./assets/images/bg/furina_bg.jpg')",
-    "url('./assets/images/bg/nahida_bg.jpg')",
-    "url('./assets/images/bg/raiden_bg.jpg')",
-    "url('./assets/images/bg/zhongli_bg.jpg')",
-    "url('./assets/images/bg/venti_bg.jpg')"
-]
-var cardArray = [
-    "./assets/images/cards/columbina_card.png",
-    "./assets/images/cards/mavuika_card.png",
-    "./assets/images/cards/furina_card.png",
-    "./assets/images/cards/nahida_card.png",
-    "./assets/images/cards/raiden_card.png",
-    "./assets/images/cards/zhongli_card.png",
-    "./assets/images/cards/venti_card.png"
-]
-
-var visionArray = [
-    "./assets/images/visions/hydro.png",
-    "./assets/images/visions/pyro.png",
-    "./assets/images/visions/hydro.png",
-    "./assets/images/visions/dendro.png",
-    "./assets/images/visions/electro.png",
-    "./assets/images/visions/geo.png",
-    "./assets/images/visions/anemo.png"
-]
-
-var characterNameArray = [
-    "Columbina",
-    "Mavuika",
-    "Furina",
-    "Nahida",
-    "Raiden",
-    "Zhongli",
-    "Venti",
-]
-
 //Carousel Intervals
 setInterval(() => {
   carouselTimer++;
@@ -174,7 +134,7 @@ function CarouselStart() {
 }
 
 function CarouselNext() {
-    if(pageIndex < cardArray.length - 1) {
+    if(pageIndex < genshinDirectory.length - 1) {
         pageIndex++;
         PageUpdate();
     } else {
@@ -188,7 +148,7 @@ function CarouselPrev() {
         pageIndex--;
         PageUpdate();
     } else {
-        pageIndex = cardArray.length - 1;
+        pageIndex = genshinDirectory.length - 1;
         PageUpdate();
     }
 }
