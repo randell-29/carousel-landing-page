@@ -25,7 +25,7 @@ body {
 
 body:before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.7);
 }
@@ -94,7 +94,6 @@ main {
 
 .info {
     width: 100%;
-    height: 400px;
 }
 
 .info .main-info{
@@ -176,7 +175,6 @@ main {
 
 .carousel-holder {    
     width: 100%;
-    height: 400px;
     display: flex;
     justify-content: center;    
     align-items: center;    
@@ -192,6 +190,12 @@ main {
 
 .carousel-holder .carousel .slide i{
     font-size: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.slide i:hover {
+    color: var(--primary);
 }
 
 .carousel-holder .carousel img {
@@ -199,7 +203,7 @@ main {
 }
 
 footer {
-    margin-top: 90px;
+    margin-top: 100px;
     margin-bottom:10px;
     padding: 0 60px 10px 60px;
 }
@@ -211,8 +215,8 @@ footer {
 }
 
 .externals .socials ul{
+    margin-bottom: 0;
     display: flex;
-    justify-content: end;
     align-items: center;
     list-style: none;
 }
