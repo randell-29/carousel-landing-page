@@ -107,12 +107,17 @@ setInterval(() => {
   carouselTimer++;
     
   if(carouselTimer == 5) {
-    activeImg.style.transform = "translateX(-100px) scale(0.8)";
-    inactiveLeft1.style.transform = "translateX(-100px) scale(0.8)";
-    inactiveLeft2.style.transform = "translateX(-100px) scale(0.8)";
-    inactiveRight1.style.transform = "translateX(-100px) scale(1.2)";
-    inactiveRight2.style.transform = "translateX(-100px) scale(1.2)";
-    activeImg.style.opacity = 0;
+    inactiveLeft2.style.transform = "translateX(-200px) scale(0.2)";
+    inactiveLeft1.style.transform = "translateX(-200px) scale(0.2)";
+    activeImg.style.transform = "translateX(-200px) scale(0.5)";
+    inactiveRight1.style.transform = "translateX(-200px) scale(2)";
+    inactiveRight2.style.transform = "translateX(-200px) scale(2)";
+
+    inactiveLeft2.style.opacity = 0;
+    inactiveLeft1.style.opacity = .6;
+    activeImg.style.opacity = .8;
+    inactiveRight1.style.opacity = 1;
+    inactiveRight2.style.opacity = .8;
 
     setTimeout(() => {
             CarouselNext();
@@ -121,8 +126,13 @@ setInterval(() => {
             inactiveLeft2.style.transform = "translateX(0)";
             inactiveRight1.style.transform = "translateX(0)";
             inactiveRight2.style.transform = "translateX(0)";
+
+            inactiveLeft2.style.opacity = .6;
+            inactiveLeft1.style.opacity = .8;
             activeImg.style.opacity = 1;
-        }, 250
+            inactiveRight1.style.opacity = .8;
+            inactiveRight2.style.opacity = .6;
+        }, 200
     );
   }
 
@@ -204,11 +214,12 @@ function InactiveCards() {
         inactiveLeft2.src = genshinDirectory[inactiveIndexLeft2].portrait;
     }
 
+    
     if (inactiveIndexRight2 == genshinDirectory.length + 1) {
-        inactiveIndexRight2 = genshinDirectory.length - 2;
+        inactiveIndexRight2 = 1;
         inactiveRight2.src = genshinDirectory[inactiveIndexRight2].portrait;
     } else if (inactiveIndexRight2 == genshinDirectory.length) {
-        inactiveIndexRight2 = genshinDirectory.length - 1;
+        inactiveIndexRight2 = 0;
         inactiveRight2.src = genshinDirectory[inactiveIndexRight2].portrait;
     } else {
         inactiveRight2.src = genshinDirectory[inactiveIndexRight2].portrait;
