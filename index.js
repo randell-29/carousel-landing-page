@@ -11,9 +11,11 @@ const visionText = document.getElementById("vision");
 const weaponText = document.getElementById("weapon");
 const regionText = document.getElementById("region");
 const loreText = document.getElementById("lore");
-const inactiveLeft = document.getElementById("inactive-card-left");
+const inactiveLeft2 = document.getElementById("inactive-card-left2");
+const inactiveLeft1 = document.getElementById("inactive-card-left1");
 const activeImg = document.getElementById("active-card");
-const inactiveRight = document.getElementById("inactive-card-right");
+const inactiveRight1 = document.getElementById("inactive-card-right1");
+const inactiveRight2 = document.getElementById("inactive-card-right2");
 const visionImg = document.getElementById("character-vision");
 const bodyBG = document.querySelector("body")
 const nextButton = document.getElementById("next-button");
@@ -103,9 +105,25 @@ const genshinDirectory = [
 //Carousel Intervals
 setInterval(() => {
   carouselTimer++;
-
+    
   if(carouselTimer == 5) {
-    CarouselNext();
+    activeImg.style.transform = "translateX(-100px) scale(0.8)";
+    inactiveLeft1.style.transform = "translateX(-100px) scale(0.8)";
+    inactiveLeft2.style.transform = "translateX(-100px) scale(0.8)";
+    inactiveRight1.style.transform = "translateX(-100px) scale(1.2)";
+    inactiveRight2.style.transform = "translateX(-100px) scale(1.2)";
+    activeImg.style.opacity = 0;
+
+    setTimeout(() => {
+            CarouselNext();
+            activeImg.style.transform = "translateX(0)";
+            inactiveLeft1.style.transform = "translateX(0)";
+            inactiveLeft2.style.transform = "translateX(0)";
+            inactiveRight1.style.transform = "translateX(0)";
+            inactiveRight2.style.transform = "translateX(0)";
+            activeImg.style.opacity = 1;
+        }, 250
+    );
   }
 
 }, 1000);
@@ -118,30 +136,13 @@ function InitializeButtons() {
 }
 
 function PageUpdate() {
-    var inactiveIndexLeft = pageIndex - 1;
-    var inactiveIndexRight = pageIndex + 1;
-
     characterName.textContent = genshinDirectory[pageIndex].name;
     genderText.textContent = genshinDirectory[pageIndex].gender;
     visionText.textContent = genshinDirectory[pageIndex].vision;
     weaponText.textContent = genshinDirectory[pageIndex].weapon;
     regionText.textContent = genshinDirectory[pageIndex].region;
     //loreText.textContent = genshinDirectory[pageIndex].lore;
-    
-    if (inactiveIndexLeft < 0) {
-        inactiveIndexLeft = genshinDirectory.length - 1;
-        inactiveLeft.src = genshinDirectory[inactiveIndexLeft].portrait;
-    } else {
-        inactiveLeft.src = genshinDirectory[inactiveIndexLeft].portrait;
-    }
-
-    if (inactiveIndexRight > genshinDirectory.length - 1) {
-        inactiveIndexRight = 0;
-        inactiveRight.src = genshinDirectory[inactiveIndexRight].portrait;
-    } else {
-        inactiveRight.src = genshinDirectory[inactiveIndexRight].portrait;
-    }
-
+    InactiveCards();
     activeImg.src = genshinDirectory[pageIndex].portrait;
     visionImg.src = genshinDirectory[pageIndex].visionIcon;
     bodyBG.style.backgroundImage = genshinDirectory[pageIndex].wallpaper;
@@ -170,6 +171,47 @@ function CarouselPrev() {
     } else {
         pageIndex = genshinDirectory.length - 1;
         PageUpdate();
+    }
+}
+
+function InactiveCards() {
+    var inactiveIndexLeft1 = pageIndex - 1;
+    var inactiveIndexRight1 = pageIndex + 1;
+    var inactiveIndexLeft2 = pageIndex - 2;
+    var inactiveIndexRight2 = pageIndex + 2;
+
+    if (inactiveIndexLeft1 < 0) {
+        inactiveIndexLeft1 = genshinDirectory.length - 1;
+        inactiveLeft1.src = genshinDirectory[inactiveIndexLeft1].portrait;
+    } else {
+        inactiveLeft1.src = genshinDirectory[inactiveIndexLeft1].portrait;
+    }
+
+    if (inactiveIndexRight1 > genshinDirectory.length - 1) {
+        inactiveIndexRight1 = 0;
+        inactiveRight1.src = genshinDirectory[inactiveIndexRight1].portrait;
+    } else {
+        inactiveRight1.src = genshinDirectory[inactiveIndexRight1].portrait;
+    }
+
+    if (inactiveIndexLeft2 == -2) {
+        inactiveIndexLeft2 = genshinDirectory.length - 2;
+        inactiveLeft2.src = genshinDirectory[inactiveIndexLeft2].portrait;
+    } else if (inactiveIndexLeft2 == -1) {
+        inactiveIndexLeft2 = genshinDirectory.length - 1;
+        inactiveLeft2.src = genshinDirectory[inactiveIndexLeft2].portrait;
+    } else {
+        inactiveLeft2.src = genshinDirectory[inactiveIndexLeft2].portrait;
+    }
+
+    if (inactiveIndexRight2 == genshinDirectory.length + 1) {
+        inactiveIndexRight2 = genshinDirectory.length - 2;
+        inactiveRight2.src = genshinDirectory[inactiveIndexRight2].portrait;
+    } else if (inactiveIndexRight2 == genshinDirectory.length) {
+        inactiveIndexRight2 = genshinDirectory.length - 1;
+        inactiveRight2.src = genshinDirectory[inactiveIndexRight2].portrait;
+    } else {
+        inactiveRight2.src = genshinDirectory[inactiveIndexRight2].portrait;
     }
 }
 
