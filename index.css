@@ -381,3 +381,39 @@ footer .gameplay i{
         width: 200px;
     }
 }
+
+@media (max-width: 480px) {
+    .cards-holder #inactive-card-left1 {
+        margin-right: -50px;
+        width: 100px;
+        }
+
+    .cards-holder #inactive-card-left2 {
+            margin-right: -25px;
+            width: 50px;
+        }
+
+    .cards-holder #inactive-card-right1 {
+            margin-left: -50px;
+            width: 100px;
+        }
+
+    .cards-holder #inactive-card-right2 {
+            margin-left: -25px;
+            width: 50px;
+        }
+
+    .carousel .cards-holder #active-card {
+            width: 150px;
+        }
+
+    .carousel .button-holder .slide i{
+            font-size: 30px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+    .info {
+        margin: 10px;
+    }
+}
