@@ -124,7 +124,7 @@ function InitializeButtons() {
 function PageUpdate() {
     ImageUpdate();
     ContentUpdate();
-    EnableButtons();
+    setTimeout(EnableButtons, 100);
     carouselTimer = 0;
 }
 
@@ -164,9 +164,11 @@ function CarouselNext() {
 function CarouselPrev() {
     if(pageIndex > 0) {
         pageIndex--;
+        DisableButtons();
         CardAnimationLeft();
     } else {
         pageIndex = genshinDirectory.length - 1;
+        DisableButtons();
         CardAnimationLeft();
     }
 }
@@ -189,11 +191,11 @@ function CardAnimationRight() {
 }
 
 function CardAnimationLeft() {
-    inactiveLeft2.style.transform = "translateX(200px) scale(1.5)";
-    inactiveLeft1.style.transform = "translateX(200px) scale(1.5)";
-    activeImg.style.transform = "translateX(250px) scale(0.5)";
-    inactiveRight1.style.transform = "translateX(300px) scale(0.2)";
-    inactiveRight2.style.transform = "translateX(250px) scale(0.2)";
+    inactiveLeft2.style.transform = "translateX(100px) scale(1.5)";
+    inactiveLeft1.style.transform = "translateX(100px) scale(1.5)";
+    activeImg.style.transform = "translateX(150px) scale(0.5)";
+    inactiveRight1.style.transform = "translateX(200px) scale(0.2)";
+    inactiveRight2.style.transform = "translateX(150px) scale(0.2)";
 
     inactiveLeft2.style.opacity = .5;
     inactiveLeft1.style.opacity = 1;
