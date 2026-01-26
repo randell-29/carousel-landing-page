@@ -10,7 +10,7 @@
 }
 
 :root {
-    --primary: red;
+    --theme: red;
 }
 
 body {
@@ -52,6 +52,7 @@ header {
 }
 
 .navigation ul{
+    padding-top: 15px;
     padding-left: 0;
     display: flex;
     justify-content: center;
@@ -70,17 +71,22 @@ header {
 }
 
 .navigation ul li:hover {
-    color: var(--primary);
+    color: var(--theme);
 }
 
 .navigation ul li:first-child i:hover {
-    color: var(--primary);
+    color: var(--theme);
 }
 
 .search-bar {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.search-bar input {
+    border: 1px solid #000;
+    border-radius: 10px;
 }
 
 main {
@@ -103,6 +109,11 @@ main {
 }
 
 .main-info .character-name {
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: var(--theme);
     font-optical-sizing: auto;
     font-size: 45px;
     font-weight: 900;
@@ -127,7 +138,7 @@ main {
 .tags span {
     margin: 0 3px 0 3px;
     border-right: 1px solid #fff;
-    padding-right: 6px;
+    padding-right: 10px;
 }
 
 .tags span:first-child {
@@ -136,6 +147,11 @@ main {
 
 .tags span:last-child {
     border-right: none;
+}
+
+#vision {
+    color: var(--theme);
+    text-decoration: underline;
 }
 
 .sub-info .lore {
@@ -166,7 +182,7 @@ main {
 .buttons button:hover {
     border: 1px;
     border-radius: 2px;
-    background-color: var(--primary);
+    background-color: var(--theme);
 }
 
 .buttons button:first-child {
@@ -252,7 +268,7 @@ main {
 }
 
 .slide i:hover {
-    color: var(--primary);
+    color: var(--theme);
 }
 
 .disabled {
@@ -285,7 +301,7 @@ footer {
 }
 
 .socials ul li i:hover {
-    color: var(--primary);
+    color: var(--theme);
 }
 
 footer .gameplay button {
@@ -309,5 +325,5 @@ footer .gameplay i{
 }
 
 .gameplay button:hover {
-    background-color: var(--primary);
+    background-color: var(--theme);
 }

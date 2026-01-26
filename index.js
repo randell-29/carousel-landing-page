@@ -34,7 +34,8 @@ const genshinDirectory = [
         portrait: "./assets/images/cards/columbina_card.png",
         wallpaper: "url('./assets/images/bg/columbina_bg.jpg')",
         visionIcon: "./assets/images/visions/hydro.png",
-        lore: ""
+        lore: "",
+        theme: "#62c1e5"
     },
     {
         name: "Mavuika",
@@ -45,7 +46,8 @@ const genshinDirectory = [
         portrait: "./assets/images/cards/mavuika_card.png",
         wallpaper: "url('./assets/images/bg/mavuika_bg.jpg')",
         visionIcon: "./assets/images/visions/pyro.png",
-        lore: ""
+        lore: "",
+        theme: "#ff7045"
     },
     {
         name: "Furina",
@@ -56,7 +58,8 @@ const genshinDirectory = [
         portrait: "./assets/images/cards/furina_card.png",
         wallpaper: "url('./assets/images/bg/furina_bg.jpg')",
         visionIcon: "./assets/images/visions/hydro.png",
-        lore: ""
+        lore: "",
+        theme: "#62c1e5"
     },
     {
         name: "Nahida",
@@ -67,7 +70,8 @@ const genshinDirectory = [
         portrait: "./assets/images/cards/nahida_card.png",
         wallpaper: "url('./assets/images/bg/nahida_bg.jpg')",
         visionIcon: "./assets/images/visions/dendro.png",
-        lore: ""
+        lore: "",
+        theme: "#66b266"
     },
     {
         name: "Raiden",
@@ -78,7 +82,8 @@ const genshinDirectory = [
         portrait: "./assets/images/cards/raiden_card.png",
         wallpaper: "url('./assets/images/bg/raiden_bg.jpg')",
         visionIcon: "./assets/images/visions/electro.png",
-        lore: ""
+        lore: "",
+        theme: "#be68be"
     },
     {
         name: "Zhongli",
@@ -89,7 +94,8 @@ const genshinDirectory = [
         portrait: "./assets/images/cards/zhongli_card.png",
         wallpaper: "url('./assets/images/bg/zhongli_bg.jpg')",
         visionIcon: "./assets/images/visions/geo.png",
-        lore: ""
+        lore: "",
+        theme: "#e5c100"
     },
     {
         name: "Venti",
@@ -100,7 +106,8 @@ const genshinDirectory = [
         portrait: "./assets/images/cards/venti_card.png",
         wallpaper: "url('./assets/images/bg/venti_bg.jpg')",
         visionIcon: "./assets/images/visions/anemo.png",
-        lore: ""
+        lore: "",
+        theme: "#18ffd0"
     }
 ]
 
@@ -124,6 +131,7 @@ function InitializeButtons() {
 function PageUpdate() {
     ImageUpdate();
     ContentUpdate();
+    ThemeUpdate();
     setTimeout(EnableButtons, 100);
     carouselTimer = 0;
 }
@@ -142,6 +150,10 @@ function ImageUpdate() {
     visionImg.src = genshinDirectory[pageIndex].visionIcon;
     bodyBG.style.backgroundImage = genshinDirectory[pageIndex].wallpaper;
     InactiveCards();
+}
+
+function ThemeUpdate() {
+    document.documentElement.style.setProperty("--theme", genshinDirectory[pageIndex].theme);
 }
 
 function CarouselStart() {
