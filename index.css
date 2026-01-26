@@ -247,7 +247,7 @@ main {
     width: 200px;
 }
 
-.carousel .cards-holder img {
+.carousel .cards-holder #active-card {
     width: 300px;
 }
 
@@ -326,4 +326,58 @@ footer .gameplay i{
 
 .gameplay button:hover {
     background-color: var(--theme);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-holder #inactive-card-left1 {
+        margin-right: -100px;
+        width: 200px;
+        }
+
+.cards-holder #inactive-card-left2 {
+        margin-right: -100px;
+        width: 150px;
+    }
+
+.cards-holder #inactive-card-right1 {
+        margin-left: -100px;
+        width: 200px;
+    }
+
+.cards-holder #inactive-card-right2 {
+        margin-left: -100px;
+        width: 150px;
+    }
+
+.carousel .cards-holder #active-card {
+        width: 250px;
+    }
+}
+
+
+@media (max-width: 512px) {
+    .cards-holder #inactive-card-left1 {
+        margin-right: -50px;
+        width: 150px;
+        }
+
+.cards-holder #inactive-card-left2 {
+        margin-right: -50px;
+        width: 100px;
+    }
+
+.cards-holder #inactive-card-right1 {
+        margin-left: -50px;
+        width: 150px;
+    }
+
+.cards-holder #inactive-card-right2 {
+        margin-left: -50px;
+        width: 100px;
+    }
+
+.carousel .cards-holder #active-card {
+        width: 200px;
+    }
 }
