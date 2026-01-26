@@ -202,12 +202,12 @@ main {
 }
 
 .inactive-card1 {
-    opacity: 30%;
+    opacity: 50%;
     z-index: 9;
 }
 
 .inactive-card2 {
-    opacity: 10%;
+    opacity: 25%;
     z-index: 8;
 }
 
@@ -253,6 +253,10 @@ main {
 
 .slide i:hover {
     color: var(--primary);
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 footer {
